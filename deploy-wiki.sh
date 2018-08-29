@@ -18,6 +18,7 @@ echo "[Step 1] ······ hexo引擎已生成本地静态文件"
 
 # Step 2
 cd ${WIKI_HOME}/output
+git add *
 git checkout master
 git commit -a -m "Site updated: `date`"    # Site updated: 2018年08月29日 15:39:17
 git push
