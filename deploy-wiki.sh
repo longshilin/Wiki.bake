@@ -9,20 +9,22 @@
 # 2. checkout到Wiki-dev项目分支，提交hexo源码
 #
 
+WIKI_HOME=/d/Wiki
+
 # Step 1
-cd /d/Wiki
+cd ${WIKI_HOME}
 simiki g
 echo "[Step 1] ······ hexo引擎已生成本地静态文件"
 
 # Step 2
-cd /d/Wiki/output
+cd ${WIKI_HOME}/output
 git checkout master
 git commit -a -m "Site updated: `date`"    # Site updated: 2018年08月29日 15:39:17
 git push
 echo "[Step 2] ······ Wiki站点静态文件已同步到git远程仓库的master分支"
 
 # Step 3
-cd /d/Wiki
+cd ${WIKI_HOME}
 git checkout dev
 git commit -a -m "Site updated: `date`"
 git push
